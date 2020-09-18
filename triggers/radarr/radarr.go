@@ -6,7 +6,7 @@ import (
 	"path"
 	"time"
 
-	"github.com/cloudbox/autoscan"
+	"github.com/buroa/autoscan"
 	"github.com/rs/zerolog/hlog"
 )
 

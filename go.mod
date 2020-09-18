@@ -1,4 +1,4 @@
-module github.com/cloudbox/autoscan
+module github.com/buroa/autoscan
 
 go 1.14
 

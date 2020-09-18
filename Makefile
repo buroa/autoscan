@@ -41,9 +41,9 @@ publish: ## Generate a release, and publish
 			-e VERSION="${GIT_TAG_NAME}" \
 			-e GIT_COMMIT="${GIT_COMMIT}" \
 			-e TIMESTAMP="${TIMESTAMP}" \
-			-v `pwd`:/go/src/github.com/Cloudbox/autoscan \
+			-v `pwd`:/go/src/github.com/buroa/autoscan \
 			-v /var/run/docker.sock:/var/run/docker.sock \
-			-w /go/src/github.com/Cloudbox/autoscan \
+			-w /go/src/github.com/buroa/autoscan \
 			neilotoole/xcgo:latest goreleaser --rm-dist
 
 .PHONY: snapshot
@@ -52,7 +52,7 @@ snapshot: ## Generate a snapshot release
 		-e VERSION="${VERSION}" \
 		-e GIT_COMMIT="${GIT_COMMIT}" \
 		-e TIMESTAMP="${TIMESTAMP}" \
-		-v `pwd`:/go/src/github.com/Cloudbox/autoscan \
+		-v `pwd`:/go/src/github.com/buroa/autoscan \
 		-v /var/run/docker.sock:/var/run/docker.sock \
-		-w /go/src/github.com/Cloudbox/autoscan \
+		-w /go/src/github.com/buroa/autoscan \
 		neilotoole/xcgo:latest goreleaser --snapshot --skip-validate --skip-publish --rm-dist

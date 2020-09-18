@@ -2,7 +2,7 @@ package inotify
 
 import (
 	"fmt"
-	"github.com/cloudbox/autoscan"
+	"github.com/buroa/autoscan"
 	"github.com/fsnotify/fsnotify"
 	"github.com/rs/zerolog"
 	"os"

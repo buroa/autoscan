@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cloudbox/autoscan"
+	"github.com/buroa/autoscan"
 
 	// sqlite3 driver
 	_ "github.com/mattn/go-sqlite3"

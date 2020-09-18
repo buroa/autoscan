@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/cloudbox/autoscan"
+	"github.com/buroa/autoscan"
 	"golang.org/x/sync/errgroup"
 )
 

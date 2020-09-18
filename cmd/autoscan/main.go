@@ -15,16 +15,16 @@ import (
 	"github.com/rs/zerolog/log"
 	"gopkg.in/yaml.v2"
 
-	"github.com/cloudbox/autoscan"
-	"github.com/cloudbox/autoscan/processor"
-	"github.com/cloudbox/autoscan/targets/emby"
-	"github.com/cloudbox/autoscan/targets/plex"
-	"github.com/cloudbox/autoscan/triggers"
-	"github.com/cloudbox/autoscan/triggers/bernard"
-	"github.com/cloudbox/autoscan/triggers/inotify"
-	"github.com/cloudbox/autoscan/triggers/lidarr"
-	"github.com/cloudbox/autoscan/triggers/radarr"
-	"github.com/cloudbox/autoscan/triggers/sonarr"
+	"github.com/buroa/autoscan"
+	"github.com/buroa/autoscan/processor"
+	"github.com/buroa/autoscan/targets/emby"
+	"github.com/buroa/autoscan/targets/plex"
+	"github.com/buroa/autoscan/triggers"
+	"github.com/buroa/autoscan/triggers/bernard"
+	"github.com/buroa/autoscan/triggers/inotify"
+	"github.com/buroa/autoscan/triggers/lidarr"
+	"github.com/buroa/autoscan/triggers/radarr"
+	"github.com/buroa/autoscan/triggers/sonarr"
 )
 
 type config struct {
