@@ -99,6 +99,16 @@ func (t target) Scan(scan autoscan.Scan) error {
 		}
 
 		l.Info().Msg("Scan moved to target")
+
+		if scan.Analyze {
+			l.Trace().Msg("Sending analyze request")
+
+			if err := t.api.Analyze(scanFolder, lib.ID); err != nil {
+				return err
+			}
+
+			l.Info().Msg("Analyze moved to target")
+		}
 	}
 
 	return nil

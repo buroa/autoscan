@@ -157,3 +157,23 @@ func (c apiClient) Scan(path string, libraryID int) error {
 	res.Body.Close()
 	return nil
 }
+
+func (c apiClient) Analyze(path string, libraryID int) error {
+	reqURL := autoscan.JoinURL(c.baseURL, "library", "sections", strconv.Itoa(libraryID), "analyze")
+	req, err := http.NewRequest("PUT", reqURL, nil)
+	if err != nil {
+		return fmt.Errorf("failed creating analyze request: %v: %w", err, autoscan.ErrFatal)
+	}
+
+	q := url.Values{}
+	q.Add("path", path)
+	req.URL.RawQuery = q.Encode()
+
+	res, err := c.do(req)
+	if err != nil {
+		return fmt.Errorf("analyze: %w", err)
+	}
+
+	res.Body.Close()
+	return nil
+}

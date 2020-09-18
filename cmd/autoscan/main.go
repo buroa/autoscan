@@ -25,6 +25,7 @@ import (
 	"github.com/buroa/autoscan/triggers/lidarr"
 	"github.com/buroa/autoscan/triggers/radarr"
 	"github.com/buroa/autoscan/triggers/sonarr"
+	"github.com/buroa/autoscan/triggers/tdarr"
 )
 
 type config struct {
@@ -267,6 +268,7 @@ func main() {
 		Int("lidarr", len(c.Triggers.Lidarr)).
 		Int("sonarr", len(c.Triggers.Sonarr)).
 		Int("radarr", len(c.Triggers.Radarr)).
+		Int("tdarr", len(c.Triggers.Tdarr)).
 		Msg("Initialised triggers")
 
 	// targets
